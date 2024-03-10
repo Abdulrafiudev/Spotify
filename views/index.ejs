@@ -12,25 +12,31 @@
 <body>
 
   <div class="section">
-    <div class="header">
-      <div class="left_section">
-        <img src="/images/spotify_logo.png" alt="spotify_logo" class="logo">
-        <div class="logo_name"> spotify </div>
-      </div>
-      <div class="rigth_section">
-        <div class="dev_name"> Abdulrafiu.dev </div>
-      </div>
-    </div>
-
+   <%- include(`partials/header.ejs`) %>
+   
     <div class="input_element">
       <form action="/user" method="post" class="form">
         <div class="input_div">
           <input type="text" placeholder="Enter Username" class="input_box" name="input">
-          <svg data-encore-id="icon" role="img" aria-hidden="true" class="search_icon" viewBox="0 0 16 16"><path d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"></path></svg>
+          <img src="/images/search_icon.png" alt="search icon" class="search_icon">
         </div>
         <input type="submit" value="Search" class="Search_button">
       </form>
     </div>
+    <% if (locals.result){ %>
+    <div>
+      <p class="content"> <%= result.display_name %></p>
+     <!-- <p class="content"> <%#result.followers.total %></p> -->
+    </div>
+
+    <% } %>
+
+    <% if (locals.error){ %>
+    <div>
+      <p class="content"> <%= error %> </p>
+    </div>
+
+    <% } %>
   </div>
 
 
