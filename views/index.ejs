@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Butcherman&family=Caveat&family=DM+Sans:opsz@9..40&family=Kalam:wght@300&family=Lato:wght@700;900&family=Libre+Baskerville&family=Madimi+One&family=Montserrat:wght@400;600;700&family=Nosifer&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Butcherman&family=Caveat&family=DM+Sans:opsz@9..40&family=Kalam:wght@300&family=Lato:wght@700;900&family=Libre+Baskerville&family=Madimi+One&family=Montserrat:wght@400;600;700&family=Nosifer&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Spotify</title>
 </head>
 <body>
 
   <div class="section">
    <%- include(`partials/header.ejs`) %>
-   
+
     <div class="input_element">
       <form action="/user" method="post" class="form">
         <div class="input_div">
@@ -23,16 +23,9 @@
         <input type="submit" value="Search" class="Search_button">
       </form>
     </div>
-    <% if (locals.result){ %>
-    <div>
-      <p class="content"> <%= result.display_name %></p>
-     <!-- <p class="content"> <%#result.followers.total %></p> -->
-    </div>
-
-    <% } %>
 
     <% if (locals.error){ %>
-    <div>
+    <div class="error_box">
       <p class="content"> <%= error %> </p>
     </div>
 

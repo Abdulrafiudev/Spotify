@@ -100,3 +100,46 @@
 .content{
   color: white;
 }
+.information_section{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.user_image{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.information_content{
+  margin-top: 30px;
+}
+.your_information{
+  color: white;
+  font-family: 'Madimi One';
+  font-size: 28px;
+  margin-bottom: 33px;
+}
+.items{
+  color: white;
+  font-family: 'Madimi One';
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.error_box{
+  position: absolute;
+  top: 60%;
+  left: 48%;
+  transform: translate(-50%);
+
+}
+.content{
+  font-size: 18px;
+  font-family: 'Madimi One';
+  color: white;
+}

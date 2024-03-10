@@ -24,11 +24,11 @@ app.post(`/user`, async (req, res) => {
     })
     let result = response.data
     console.log(result)
-    res.render(`index.ejs`, {result})
+    res.render(`information.ejs`, {result})
   }
   catch(error){
     console.error(`Failed to make request`, error.message)
-    res.render(`index.ejs`, {result: `Invalid user`})
+    res.render(`index.ejs`, {error: `Invalid user`})
   }
 })
 
