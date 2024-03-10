@@ -11,3 +11,33 @@
   background-position: center;
   background-size: cover;
 }
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+ 
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+.left_section{
+  margin-left: 70px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.rigth_section{
+  margin-right: 50px;
+}
+.logo{
+  height: 50px;
+  width: 50px;
+}
+.logo_name{
+  color: white;
+}
+.dev_name{
+  color: white;
+}
