@@ -16,9 +16,15 @@
 
     <div class="information_section">
       <div class="your_information"> Your Information: </div>
-      <img class="user_image" src="<%= result.images.url %>" alt="users image">
+      <% let first_iteration = true %>
+      <% result.images.forEach((images) => { %>
+        <% if (first_iteration){ %>
+          <img class="user_image" src="<%= images.url %>" alt="users image">
+          <% first_iteration = false %>
+        <% } %>
+      <% }) %>
       <div class="information_content">
-        <div class="items"> Username: <%= result.display_name  %> </div>
+        <div class="items"> Profile name: <%= result.display_name  %> </div>
         <div class="items"> followers: <%= result.followers.total  %></div>
         <div class="items"> ID: <%= result.id %></div>
         <div class="items"> Uri: <%= result.uri  %></div>
