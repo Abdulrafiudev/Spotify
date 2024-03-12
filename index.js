@@ -7,7 +7,8 @@ let port = 3000
 app.use(express.static(`public`))
 app.use(body_parser.urlencoded({ extended: true }));
 
-let your_token = "BQCEg8i5xSWbX2fer-6feB0_3gDA2xM2LRratjRXu3x8w0Bjl-6X7TnH7ImLtcMoHSWP154ZL7ueE61awOfprzxY5L-vexzbJRO7ISYA6hxyiHV743Y"
+let your_token = "BQC7YmzyP8p1ZYPkwMPJwiYic9_5mX-Nn7Q7XotxVfT8SGY7K5XyRitl9OUWM5mLiLwNe9hSnkedH3QOPa-ZdvHbhUchaXhqUMkT_ELQii0PgWxCsE0";
+
 
 
 app.get(`/`, async (req, res) => {
