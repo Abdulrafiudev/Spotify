@@ -10,8 +10,9 @@ app.use(body_parser.urlencoded({ extended: true }));
 let your_token = "BQCEg8i5xSWbX2fer-6feB0_3gDA2xM2LRratjRXu3x8w0Bjl-6X7TnH7ImLtcMoHSWP154ZL7ueE61awOfprzxY5L-vexzbJRO7ISYA6hxyiHV743Y"
 
 
-app.get(`/`, (req, res) => {
-  res.render(`index.ejs`)
+app.get(`/`, async (req, res) => {
+
+      res.render(`index.ejs`)
 })
 
 app.post(`/user`, async (req, res) => {
